@@ -37,13 +37,13 @@
         });
 
         function sendMessage() {
-            const message = document.getElementById("message").value;
+            const dataMessage = document.getElementById("message").value;
 
-            if (!message) return false;
+            if (!dataMessage) return false;
 
-            ws.send(JSON.stringify({ type: "message", data: message }));
+            ws.send(JSON.stringify({ type: "message", data: dataMessage }));
 
-            addMessage(message);
+            addMessage(dataMessage);
             document.getElementById("message").value = "";
         }
 
